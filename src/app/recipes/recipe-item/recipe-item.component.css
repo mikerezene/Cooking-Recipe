@@ -1,0 +1,178 @@
+
+#rating{
+width:40%;
+}
+#star1{
+    float:left;
+    width:7%;
+}
+#star2{
+    float:left;
+    width:7%;
+}
+#star3{
+      float:left;
+      width:7%;
+}
+#star4{
+      float:left;
+      width:7%;
+}
+#star5{
+      float:left;
+      width:7%;
+}
+html,
+body {
+  width:100%;
+ 
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+.background {
+  background-color: #232741;
+
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* === page-container ===*/
+.page-container {
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+  margin-right: 0vw;
+  margin-left: 0vw;
+
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.left-side,
+.right-side {
+  width: calc(100% - 12px);
+  padding: 6px; 
+  float: left;
+}
+
+/* === left-side ===*/
+.left-side {
+}
+.brand {
+
+  margin-top: 0vh;
+  
+  color: #fff;  
+  text-align: left;
+}
+
+/* === right-side ===*/
+.wall {
+  overflow-y: hidden;
+  height: 200%;
+  width: 100%;
+  
+  background-color: #fff;
+  color: #000;
+
+  border-radius: 15px;
+}
+
+/* === wall content ===*/
+.wall .section {
+  padding: 20px;
+
+  text-align: center;
+}
+/* intro */
+.section.intro {
+  /*
+  any spacial css for this section
+  */
+} 
+/* =======================================
+2- Small devices (landscape phones, 576px and up)
+========================================*/
+@media (min-width: 576px) {
+}
+
+/* =======================================
+3- Medium devices (tablets, 768px and up)
+========================================*/
+@media (min-width: 768px) {
+}
+
+/* =======================================
+4- Large devices (desktops, 992px and up)
+========================================*/
+@media (min-width: 992px) { 
+
+/* === 1-1 full page ===*/
+html,
+body {
+  overflow-y: hidden;
+}
+.background {
+}
+
+/* === page-container ===*/
+.page-container {
+  margin-bottom: 8vh;
+  margin-top: 7vh;
+  margin-right: 8vw;
+  margin-left: 8vw;
+
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.left-side,
+.right-side {
+  width: 50%;
+
+  padding:10px; 
+}
+
+/* === left-side ===*/
+.left-side {
+}
+.brand {
+  min-height: 40vh;
+  margin-top: 30vh;
+} 
+
+/* === wall ===*/
+.wall {
+  height: calc(85vh);
+  overflow-x: hidden!important;
+  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* === wall content ===*/
+.wall .section {
+  min-height: calc(85vh);
+}
+/* intro */
+.section.intro {
+  /*
+  any spacial css for this section
+  */
+}
+
+}
+
+/* =======================================
+5- Extra large devices (large desktops, 1200px and up)
+========================================*/
+@media (min-width: 1200px) {  
+}
+ 
+
+ /*-----------------------------------------------------------------------------------------*/
+
+ #rating-box {
+   height: 20px;
+ }
+ #rating-box img {
+   height: 100%;
+ }
+
+    

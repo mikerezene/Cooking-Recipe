@@ -1,0 +1,131 @@
+<html>
+  <body>
+	  <div *ngFor="let profile of profile_specific" class="container">
+    <div class="fb-profile">
+        <img align="left" class="fb-image-lg" src="/assets/images/image35.jpg" alt="Profile image example"/>
+        <img align="left" class="fb-image-profile thumbnail" src="{{profile.imagePath}}" alt="Profile image example"/>
+        <div class="fb-profile-text">
+            <h1>{{profile.firstname}} {{profile.lastname}}</h1>
+            <p style="padding-left:300px">{{profile.username}}</p>
+        </div>
+    </div>
+</div> 
+<section id="contact">
+			<div class="section-content">
+				<h1 class="section-header">Add your own <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s">Cooking Recipe</span></h1>
+		 	<div id="view_button">
+        <button class="btn btn-outlined btn-info"  [routerLink]="['/addrecipe']">View your Recipes</button>
+        </div>
+      
+      	<h3>Fill the forms below</h3>
+        
+			</div>
+			<div class="contact-section">
+			<div class="container">
+				<form>
+					<div class="col-md-6 form-line">
+			  			<div class="form-group">
+			  				<label for="exampleInputUsername">title</label>
+					    	<input type="text" name="title" [(ngModel)]="addrecipe.title" class="form-control" id="" placeholder=" title">
+				  		</div>
+				  		<div class="form-group">
+					    	<label for="exampleInputEmail">username</label>
+					    	<input type="email"  name="username" [(ngModel)]="tobesent" class="form-control" id="exampleInputEmail" placeholder="username">
+					  	    </div>	
+					  	<div class="form-group">
+					    	<label for="telephone">discription</label>
+					    	<input type="tel" name="discription" [(ngModel)]="addrecipe.discription" class="form-control" id="telephone" placeholder="discription">
+			  			</div>
+              	<div class="form-group">
+					    	<label for="telephone">Step 1 :</label>
+					    	<input type="tel" name="step0" [(ngModel)]="addrecipe.step0" class="form-control" id="telephone" placeholder="Step 1">
+			  			    </div>
+
+							<form>
+                            <input #in1 type="file" name="pic" accept="image/*" >
+                            </form>
+				
+              	<div class="form-group">
+					    	<label for="telephone">Step 2 :</label>
+					    	<input type="tel" name="step1" [(ngModel)]="addrecipe.step1" class="form-control" id="telephone" placeholder="Step 2">
+			  			  </div>
+						  <form>
+                            <input #in2 type="file" name="pic" accept="image/*" >
+                            </form>
+              			<div class="form-group">
+					    	<label for="telephone">Step 3:</label>
+					    	<input type="tel" name="step2" [(ngModel)]="addrecipe.step2" class="form-control" id="telephone" placeholder="Step 3">
+			  			</div>
+						  <form>
+                            <input #in3 type="file" name="pic" accept="image/*" >
+                            </form>
+			  		</div>
+			  		<div class="col-md-6">
+			  			<div class="form-group">
+			  				<label for ="description">Steps</label>
+			  			 	              					  	<div class="form-group">
+					    	<label for="telephone">Step 4:</label>
+					    	<input type="tel" name="step3" [(ngModel)]="addrecipe.step3" class="form-control" id="telephone" placeholder="Step 4">
+			  			</div>
+						  <form>
+                            <input #in4 type="file" name="pic" accept="image/*" >
+                            </form>
+                            					  	<div class="form-group">
+					    	<label for="telephone">Step 5:</label>
+					    	<input type="tel" name="step4" [(ngModel)]="addrecipe.step4" class="form-control" id="telephone" placeholder="Step 5">
+			  			</div>
+						  <form>
+                            <input #in5 type="file" name="pic" accept="image/*" >
+                            </form>
+                            					  	<div class="form-group">
+					    	<label for="telephone">Step 6:</label>
+					    	<input type="tel" name="step5" [(ngModel)]="addrecipe.step5" class="form-control" id="telephone" placeholder="Step 6">
+			  			</div>
+						  <form>
+                            <input #in6 type="file" name="pic" accept="image/*" >
+                            </form>
+			  			</div>
+			  			<div>
+			  				<button type="button" (click)="Add(addrecipe.username,in1.value,in2.value,in3.value,in4.value,in5.value,in6.value)" class="btn btn-default submit"><i class="fa fa-paper-plane"  aria-hidden="true"></i>  Add Recipe</button>
+			  			</div>
+			  			
+					</div>
+				</form>
+			</div>
+			</div>
+		</section>
+
+
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="my-4">
+            <p class="mb-5">Add your Cooking Recipe advertise your recipes and promote your Cooking Skill </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>123-456-6789</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">feedback@cookingrecipe.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+  </body>
+</html>     

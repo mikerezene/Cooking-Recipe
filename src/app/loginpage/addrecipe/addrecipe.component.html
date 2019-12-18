@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ugarit Layout - Bootdey.com</title>
+    	
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- meta tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- website meta -->
+<!-- 
+  set website Info 
+-->
+<meta name="description" content="website description goes here">
+<meta name="keywords" content="website keywork goes here">
+<meta name="author" content="ALPHA D"> 
+<!-- 
+  set Website Title 
+-->
+<title>Ugarit - AlphaD UI</title>
+</head>
+<body class="background">
+<!-- page -->
+<div class="page-container">
+  <!-- ======================
+   right side
+  ======================= -->
+  <div class="right-side">
+    <!-- wall -->
+  
+      <div class="wall" data-simplebar>
+          <div id="title">
+      Here are the lists of the recipes that you posted so far!!!!
+    </div>
+ <div  class = "row">
+    <div class = "col-xs-12">
+        <a (click)="itemsClicked(recipe.username)" 
+        class="list-group-item clearfix"
+        *ngFor = "let recipe of recipe_specific">
+        <div class = "pull-left">
+          <img src="{{recipe.imagePath1}}" alt="{{recipe.title}}" class="img-responsive" style="max-height: 50px;">
+            
+</div>
+<span class="pull-right">
+  <h4 class="list-group-item-heading">{{ recipe.title}}</h4>
+  <p class ="list-group-item-text">{{ recipe.discription}}</p>
+ <div id="rating-box">
+  <img *ngFor="let rate of recipe.arrayStar" src="/assets/images/star2.png" class="image-responsive">
+  <img *ngFor="let rate of recipe.arrayNoStar" src="/assets/images/star1.png" class="image-responsive">
+          </div> 
+</span>
+
+</a>
+    </div>
+</div>
+      </div><!-- / .section -->
+	  </div><!-- / .wall -->
+
+</div><!-- / .page-container -->
+</body>
+</html>

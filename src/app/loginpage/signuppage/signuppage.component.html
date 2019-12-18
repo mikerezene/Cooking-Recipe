@@ -1,0 +1,48 @@
+<html>
+  <body>
+<div class="container" id="wrap">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<form class="form" >   
+<legend><span class="text-white">Sign Up</span></legend>
+<h4><span class="text-white">It's free and always will be.</span></h4>
+<div class="row">
+<div class="col-xs-6 col-md-6">
+<input type="text" name="firstname" value="" [(ngModel)]="loginModel.firstname" class="form-control input-lg" placeholder="First Name"  />                        
+</div>
+<div class="col-xs-6 col-md-6">
+<input type="text" name="lastname" value="" [(ngModel)]="loginModel.lastname" class="form-control input-lg" placeholder="Last Name"  />                        
+</div>
+</div>
+<input #in type="text" value="" name="username" [(ngModel)]="loginModel.username"  class="form-control input-lg" placeholder="Your Username"  />
+<input type="password" name="password"  [(ngModel)]="loginModel.password" value="" class="form-control input-lg" placeholder="Password"  />
+
+<form>
+<input #in type="file" name="pic" accept="image/*" >
+</form>
+
+
+<br/>
+<br/>
+<span>Write your biography here</span>
+ <textarea class="form-control" name="about" [(ngModel)] = "loginModel.about" rows="5" id="comment"></textarea>
+
+<span class="help-block"><span class="text-white">
+  By clicking Create my account, you agree to our Terms and 
+  that you have read our Data Use Policy, including our Cookie Use.</span>
+  </span>
+  <div *ngIf = (preview)><b><span class="text-primary">{{message}}</span></b>
+  </div>
+<button class="btn btn-lg btn-primary btn-block signup-btn" 
+(click) = "register(loginModel.username,in.value)" type="submit">
+Create my account
+</button>
+</form>          
+</div>
+</div>            
+</div>
+  </body>
+</html>
+
+
+

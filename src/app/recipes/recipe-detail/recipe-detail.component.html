@@ -1,0 +1,216 @@
+<html>
+    <body>
+<div id ="container1">
+<span *ngFor="let recipe_ of recipe_specific">
+<div class = "row">
+<div class = "col-xs-12">
+    <!--<img src="{{recipe_.imagePath1}}">-->
+    <header id="container_main">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+         <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                    <div class="news-block">
+                <div class="news-media">
+                <img   class="img-fluid" src="{{recipe_.imagePath1}}" alt=""></div>
+                <div class="news-title">
+                        <h2 class=" title-large"><a href="#"></a></h2>
+                      </div>
+                <div class="news-des"></div>
+                <div class="time-text"><strong><span style="text-align:center"></span></strong></div>
+                <div>
+                </div>
+              </div>
+                  </div>
+            <div  class="carousel-item">
+                    <div class="news-block">
+                <div class="news-media">
+                <img  class="img-fluid" src="{{recipe_.imagePath2}}" alt=""></div>
+                <div class="news-title">
+                        <h2 class=" title-large"><a href="#"></a></h2>
+                      </div>
+                <div class="news-des"></div>
+                <div class="time-text"><strong></strong></div>
+                <div>
+                    
+                </div>
+              </div>
+                  </div>
+            <div class="carousel-item">
+                    <div class="news-block">
+                <div class="news-media"><img class="img-fluid" src="{{recipe_.imagePath3}}" alt=""></div>
+                <div class="news-title">
+                        <h2 class=" title-large"><a href="#"></a></h2>
+                      </div>
+                <div class="news-des"></div>
+                <div class="time-text"><strong></strong></div>
+                <div></div>
+              </div>
+                  </div>
+            <div class="carousel-item">
+                    <div class="news-block">
+                <div class="news-media"><img class="img-fluid" src="{{recipe_.imagePath4}}" alt=""></div>
+                <div class="news-title">
+                        <h2 class=" title-large"><a href="#"></a></h2>
+                      </div>
+                <div class="news-des"></div>
+                <div class="time-text"><strong></strong></div>
+                <div></div>
+              </div>
+                  </div>  
+           <div class="carousel-item">
+                    <div class="news-block">
+                <div class="news-media"><img class="img-fluid" src="{{recipe_.imagePath5}}" alt=""></div>
+                <div class="news-title">
+                        <h2 class=" title-large"><a href="#"></a></h2>
+                      </div>
+                <div class="news-des"></div>
+                <div class="time-text"><strong></strong></div>
+                <div></div>
+              </div>
+                  </div>      
+         <div class="carousel-item">
+                    <div class="news-block">
+                <div class="news-media"><img class="img-fluid" src="{{recipe_.imagePath6}}" alt=""></div>
+                <div class="news-title">
+                        <h2 class=" title-large"><a href="#"></a></h2>
+                      </div>
+                <div class="news-des"></div>
+                <div class="time-text"><strong></strong></div>
+                <div></div>
+              </div>
+                  </div>            
+
+
+          </div>
+
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+</div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-30">
+    <span *ngIf="!step1selected" style="font-size:160%"><i >Step 1:</i>{{recipe_.step0}}</span>   
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-30">
+     <span style="font-size:160%"><i >Step 2:</i>{{recipe_.step1}}</span>   
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-30">
+       <span style="font-size:160%"><i >Step 3:</i>{{recipe_.step2}}</span>   
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-30">
+       <span style="font-size:160%"><i >Step 4:</i>{{recipe_.step3}}</span>   
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-30">
+       <span style="font-size:160%"><i >Step 5:</i>{{recipe_.step4}}</span>   
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-30">
+      <span style="font-size:15px"><i >Step 6:</i>{{recipe_.step5}}</span>   
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-12">
+        <div id="img-wrapper">
+            <img *ngFor="let src of imgSrcs; let i = index;" [src]="src" (click)="onRateClicked(i + 1)">
+            <button class="btn btn-success" (click)="submitRating()">Rate</button>
+        </div> 
+    </div>
+</div>
+<div id="Rating">
+
+</div>
+<br/>
+<br/>
+<span style="font-size:120%" class="text-secondary" >This Cooking Recipe is presented by:  </span>
+<br/>
+<br/>
+<div *ngFor="let profile of profile_specific" id="container">
+    <div id="main">
+<div id="img">
+    <img src="{{profile.imagePath}}" class="image-responsive">
+</div>
+<div id="name">
+    
+     <blockquote>
+     <p>{{profile.firstname}} {{profile.lastname}}</p> <small>{{profile.username}} </small>
+     </blockquote>
+</div>
+    </div>
+<div id="about">
+    <div id="content">
+    <span>About me :</span>
+    <p>{{profile.about}}</p>
+    </div>
+</div>
+</div>
+
+</span>
+ </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div *ngFor="let profile of profile_specific" class="container">
+    <div class="row">
+        <div class="col-sm-2 col-md-2">
+            <img src="/assets/images/image7.jpg" width="100%"
+            alt="" class="img-rounded img-responsive" />
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <blockquote>
+                <p>{{profile.firstname}}</p> <small><cite title="Source Title">{{profile.username}} <i class="glyphicon glyphicon-map-marker"></i></cite></small>
+            </blockquote>
+            <p>  {{profile.about}}
+                <br/>
+                 <i class="glyphicon glyphicon-globe"></i> www.bootsnipp.com
+        </div>
+    </div>
+            </div>-->

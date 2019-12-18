@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div *ngFor="let recipe of recipes">
+      <a (click)="itemsClicked(recipe.id)" class="list-group-item clearfix">
+        <div class="pull-left">
+          <img src="{{recipe.imagePath1}}" alt="{{recipe.title}}" class="img-responsive" style="max-height: 50px;">
+        </div>
+        <span class="pull-right">
+          <h4 class="list-group-item-heading">{{ recipe.title }}</h4>
+          <p class ="list-group-item-text">{{ recipe.discription}}</p>
+          <div id="rating-box">
+            <img *ngFor="let rate of recipe.arrayStar" src="/assets/images/star2.png" class="image-responsive">
+            <img *ngFor="let rate of recipe.arrayNoStar" src="/assets/images/star1.png" class="image-responsive">
+          </div>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+

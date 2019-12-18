@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cooking Recipe</title>
+
+
+  </head>
+
+  <body id="page-top">
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Cooking Recipe</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5" style="font-size: 300%;"><span class="text-secondary">The right solution for cooking</span></p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Check out some</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">We've got what you need!</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">Different Cooking Recipe for different type of diets </p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" [routerLink]="['/recipes']">Check Out Some</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Top Rated foods we got on our cooking recipe</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div   class="container">
+        <div class="row"> 
+            <div *ngFor = "let recipe of recipe_specific"  class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+               <div class="mh-100">
+                 <img src="{{recipe.imagePath1}}" class="img-thumbnail" alt="Responsive image">
+                 </div>
+              <h3 class="mb-3">{{recipe.title}}</h3>
+              <p class="text-muted mb-0">{{recipe.discription}}</p>
+               <div id="rating-box">
+            <img *ngFor="let rate of recipe.arrayStar" src="/assets/images/star2.png" class="image-responsive">
+            <img *ngFor="let rate of recipe.arrayNoStar" src="/assets/images/star1.png" class="image-responsive">
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+    </section>
+    <section class="bg-dark text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">Thank you For Visiting our Website.</h2>
+       <button type="button" [routerLink]="['/loginpage']"  class="btn btn-primary">Login</button>
+       <button type="button" [routerLink]="['/signuppage']"  class="btn btn-success">Signup</button>
+      </div>
+    </section>
+ </body>
+</html>
